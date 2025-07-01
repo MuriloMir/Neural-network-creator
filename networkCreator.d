@@ -210,6 +210,7 @@ void generateCode(NeuronImage[][5] allLayers, AudioOutputThread sounds)
     sounds.playOgg(sourceCodeCreation);
 }
 
+// start the software
 void main()
 {
     // create arrays to represent layers, 'currentLayer', 'layerInFront' and 'layerBehind' are used when deleting a neuron's synapses or a neuron itself
