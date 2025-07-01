@@ -1,5 +1,6 @@
 // This software is a visual interface for you to draw a neural network, then you just press Enter and it generates the source code of the network.
 
+// import all the tools we need
 import arsd.image : loadImageFromMemory;
 import arsd.simpleaudio : AudioOutputThread;
 import arsd.simpledisplay : Color, Image, KeyEvent, Key, MouseButton, MouseEvent, MouseEventType, OperatingSystemFont, Point, Rectangle, ScreenPainter,
