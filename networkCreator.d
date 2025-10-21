@@ -1,10 +1,10 @@
 // This software is a visual interface for you to draw a neural network, then you just press Enter and it generates the source code of the network.
 
 // import all the tools we need
-import arsd.image : loadImageFromMemory;
-import arsd.simpleaudio : AudioOutputThread;
-import arsd.simpledisplay : Color, Image, KeyEvent, Key, MouseButton, MouseEvent, MouseEventType, OperatingSystemFont, Point, Rectangle, ScreenPainter,
+import multimedia.audio : AudioOutputThread;
+import multimedia.display : Color, Image, KeyEvent, Key, MouseButton, MouseEvent, MouseEventType, OperatingSystemFont, Point, Rectangle, ScreenPainter,
                             SimpleWindow;
+import multimedia.image : loadImageFromMemory, memory;
 import std.algorithm.iteration : map;
 import std.algorithm.mutation : remove;
 import std.algorithm.searching : countUntil, canFind;
@@ -21,9 +21,6 @@ version (Windows)
     pragma(linkerDirective, "/subsystem:windows");
     pragma(linkerDirective, "/entry:mainCRTStartup");
 }
-
-// this is the data type for files we will be embedding into the executable, it has to be immutable because the arsd library demands it
-alias memory = immutable ubyte[];
 
 // load the sounds which the GUI will play, they must be global because different functions will use them
 memory neuronSelection = cast(memory) import("sounds/neuron selection.ogg"), neuronCreation = cast(memory) import("sounds/neuron creation.ogg"),
